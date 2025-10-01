@@ -1,4 +1,3 @@
-
 package DoAnCaNhan;
 
 import javax.swing.*;
@@ -9,6 +8,7 @@ import java.io.*;
 import java.util.Vector;
 
 public class QuanLySinhVien extends JFrame {
+
     private JTable table;
     private DefaultTableModel model;
 
@@ -18,12 +18,10 @@ public class QuanLySinhVien extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Bảng hiển thị sinh viên
         model = new DefaultTableModel(new String[]{"Id", "Name", "Birthday", "Address", "Email"}, 0);
         table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
 
-        // Các nút chức năng
         JButton addBtn = new JButton("Add");
         JButton deleteBtn = new JButton("Delete");
         JButton editBtn = new JButton("Edit");
@@ -40,7 +38,6 @@ public class QuanLySinhVien extends JFrame {
         add(scrollPane, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
 
-        // Sự kiện nút
         addBtn.addActionListener(e -> addStudent());
         deleteBtn.addActionListener(e -> deleteStudent());
         editBtn.addActionListener(e -> editStudent());
